@@ -1,5 +1,5 @@
-type HeaderProps = {
-    title: string
+interface HeaderProps {
+    title: string;
 }
 
 export default function Header(props: HeaderProps) {
@@ -9,3 +9,4 @@ export default function Header(props: HeaderProps) {
         </div>
     )
 }
+
