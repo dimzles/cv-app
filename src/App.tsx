@@ -1,13 +1,12 @@
 import Header from "./components/Header";
 import GeneralInfo from "./components/GeneralInfo";
 import CV from "./components/CV";
-import { useState } from "react";
+import React, { useState } from "react";
 
 function App() {
     const [fullName, setFullName] = useState('')
     
-    //TODO: figure out how to type this 'e' to avoid TS errors!
-    function handleSetFullName(e) {
+    function handleSetFullName(e: React.ChangeEvent<HTMLInputElement>) {
         if (e.target.value !== undefined) {
             setFullName(e.target.value)
         }
