@@ -1,11 +1,14 @@
+import GeneralInfoDisplay from "./CV-components/GeneralInfoDisplay"
+
 interface Props {
     fullName: string
+    email: string
 }
 
-export default function CV({ fullName }: Props) {
+export default function CV({ fullName, email }: Props) {
     return (
         <div>
-            <h1>{fullName}</h1>
+            <GeneralInfoDisplay fullName={fullName} email={email}/>
         </div>
     )
 }

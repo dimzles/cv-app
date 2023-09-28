@@ -1,0 +1,19 @@
+.app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0;
+    min-width: 320px;
+    min-height: 100vh;
+}
+
+.container {
+    grid-area: 2 / 1 / 3 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem;
+}
+
+header {
+    justify-self: center;
+    grid-area: 1 / 1 / 2 / 3
+}

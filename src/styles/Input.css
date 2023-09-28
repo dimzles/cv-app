@@ -1,6 +1,12 @@
 .input {
     display: flex;
     flex-direction: column;
+    width: 320px;
+}
+
+input {
+    border-radius: 4px;
+    padding: 4px;
 }
 
 .label-text {

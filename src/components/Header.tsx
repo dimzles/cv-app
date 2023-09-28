@@ -4,9 +4,9 @@ interface HeaderProps {
 
 export default function Header(props: HeaderProps) {
     return (
-        <div>
+        <header>
             <h1>{props.title}</h1>
-        </div>
+        </header>
     )
 }
 

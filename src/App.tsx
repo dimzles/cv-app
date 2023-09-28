@@ -1,26 +1,34 @@
-import Header from "./components/Header";
 import GeneralInfo from "./components/GeneralInfo";
 import CV from "./components/CV";
 import React, { useState } from "react";
+import '../src/styles/App.css'
+import ExampleData from "./ExampleData.ts";
+interface GeneralInfoData {
+    fullName: string,
+    email: string
+}
 
 function App() {
-    const [fullName, setFullName] = useState('')
+    //Have to pass some example data in here otherwise TypeScript is very unhappy due to generalInfo possibly being undefined!
+    const [generalInfo, setGeneralInfo] = useState<GeneralInfoData>(ExampleData)
     
-    function handleSetFullName(e: React.ChangeEvent<HTMLInputElement>) {
-        if (e.target.value !== undefined) {
-            setFullName(e.target.value)
-        }
+    function handleSetGeneralInfo(e: React.ChangeEvent<HTMLInputElement>) {
+        const id = e.target.id;
+        setGeneralInfo({...generalInfo, [id]: e.target.value})
     }
 
     return (
         <div className="app">
-            <Header title="CV Generator"/>
+            <div className="container">
             <GeneralInfo 
-            fullName={fullName}
-            onChange={handleSetFullName}
+            fullName={generalInfo.fullName}
+            email={generalInfo.email}
+            onChange={handleSetGeneralInfo}
             />
             <CV 
-            fullName={fullName}/>
+            fullName={generalInfo.fullName}
+            email={generalInfo.email}/>
+            </div>
         </div>
     )
 }
