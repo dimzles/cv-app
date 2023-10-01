@@ -3,7 +3,7 @@ import '../styles/Card.css'
 
 interface CardProps {
     children: React.ReactNode;
-    style: React.CSSProperties
+    style?: React.CSSProperties
 }
 
 export default function Card(props: CardProps) {

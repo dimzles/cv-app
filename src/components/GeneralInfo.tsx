@@ -5,12 +5,16 @@ interface Props {
     onChange: React.ChangeEventHandler
     fullName: string
     email: string
+    phoneNumber: number,
+    userLocation: string
 }
 
 export default function GeneralInfo({
     onChange,
     fullName,
-    email
+    email,
+    phoneNumber,
+    userLocation
 }: Props) {
     return (
         <Card style={{}}> 
@@ -29,6 +33,20 @@ export default function GeneralInfo({
                     onChange={onChange}
                     value={email}
                     type='email'
+                />
+                <Input 
+                    id='phone-number'
+                    inputLabel='Phone Number'
+                    onChange={onChange}
+                    value={phoneNumber}
+                    type='tel'
+                />
+                <Input
+                    id='location'
+                    inputLabel='Location'
+                    onChange={onChange}
+                    value={userLocation}
+                    type='text'
                 />
             </form>
         </Card>

@@ -5,7 +5,7 @@ interface Props {
     id: string
     inputLabel: string
     onChange: React.ChangeEventHandler
-    value: string;
+    value: string | number;
     type: string;
 }
 

@@ -3,10 +3,7 @@ import CV from "./components/CV";
 import React, { useState } from "react";
 import '../src/styles/App.css'
 import ExampleData from "./ExampleData.ts";
-interface GeneralInfoData {
-    fullName: string,
-    email: string
-}
+import { GeneralInfoData } from "./Types.ts";
 
 function App() {
     //Have to pass some example data in here otherwise TypeScript is very unhappy due to generalInfo possibly being undefined!
@@ -21,13 +18,18 @@ function App() {
         <div className="app">
             <div className="container">
             <GeneralInfo 
-            fullName={generalInfo.fullName}
-            email={generalInfo.email}
-            onChange={handleSetGeneralInfo}
+                fullName={generalInfo.fullName}
+                email={generalInfo.email}
+                phoneNumber={generalInfo.phoneNumber}
+                userLocation={generalInfo.userLocation}
+                onChange={handleSetGeneralInfo}
             />
             <CV 
-            fullName={generalInfo.fullName}
-            email={generalInfo.email}/>
+                fullName={generalInfo.fullName}
+                email={generalInfo.email}
+                phoneNumber={generalInfo.phoneNumber}
+                userLocation={generalInfo.userLocation}
+            />
             </div>
         </div>
     )
