@@ -9,7 +9,7 @@ interface Props {
 
 export default function CV({ fullName, email, phoneNumber, userLocation }: Props) {
     return (
-        <div>
+        <div className="cv">
             <GeneralInfoDisplay fullName={fullName} email={email} phoneNumber={phoneNumber} userLocation={userLocation}/>
         </div>
     )
