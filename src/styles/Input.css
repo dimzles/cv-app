@@ -7,8 +7,12 @@
 input {
     border-radius: 4px;
     padding: 4px;
+    border: none;
+    padding: 0.5rem;
+    outline: 2px solid rgba(24, 24, 24, 0.233);
+    font-family: inherit;
 }
 
-.label-text {
-    font-family: 'Heebo';
+input:focus {
+    outline: 2px solid rgba(255, 255, 255, 0.65);
 }
