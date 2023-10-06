@@ -5,3 +5,9 @@ export type GeneralInfoData = {
     userLocation: string
 }
 
+export type EducationInfoData = {
+    university: string,
+    startDate: string,
+    endDate: string,
+    description: string,
+}

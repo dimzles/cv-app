@@ -3,6 +3,8 @@ import CV from "./components/CV";
 import React, { useState } from "react";
 import '../src/styles/App.css'
 import ExampleData from "./ExampleData.ts";
+import { EducationInfoData, GeneralInfoData } from "./Types.ts";
+import Education from "./components/Education.tsx";
 
 function App() {
     //Have to pass some example data in here otherwise TypeScript is very unhappy due to generalInfo possibly being undefined!
@@ -23,6 +25,13 @@ function App() {
                     phoneNumber={generalInfo.phoneNumber}
                     userLocation={generalInfo.userLocation}
                     onChange={handleSetGeneralInfo}
+                    />
+                    <Education 
+                    university={undefined} 
+                    startDate={undefined} 
+                    endDate={undefined} 
+                    description={undefined} 
+                    onChange={undefined} 
                     />
                 </div>
             <CV 
