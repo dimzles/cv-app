@@ -1,6 +1,7 @@
 export type GeneralInfoData = {
     fullName: string,
     email: string,
-    phoneNumber: number,
+    phoneNumber: string,
     userLocation: string
 }
+

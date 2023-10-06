@@ -3,7 +3,7 @@ import GeneralInfoDisplay from "./CV-components/GeneralInfoDisplay"
 interface Props {
     fullName: string
     email: string
-    phoneNumber: number
+    phoneNumber: string
     userLocation: string
 }
 

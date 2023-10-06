@@ -1,12 +1,9 @@
 import React from 'react';
 import Input from './Input';
 import Card from './Card';
-interface Props {
+import { GeneralInfoData } from '../Types';
+interface Props extends GeneralInfoData {
     onChange: React.ChangeEventHandler
-    fullName: string
-    email: string
-    phoneNumber: number,
-    userLocation: string
 }
 
 export default function GeneralInfo({
@@ -35,14 +32,14 @@ export default function GeneralInfo({
                     type='email'
                 />
                 <Input 
-                    id='phone-number'
+                    id='phoneNumber'
                     inputLabel='Phone Number'
                     onChange={onChange}
                     value={phoneNumber}
                     type='tel'
                 />
                 <Input
-                    id='location'
+                    id='userLocation'
                     inputLabel='Location'
                     onChange={onChange}
                     value={userLocation}
